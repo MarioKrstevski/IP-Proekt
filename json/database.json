@@ -6,7 +6,8 @@
     "price":"300$",
     "likes":0,
     "dislikes":0,
-    "delete":false
+    "delete":false,
+    "id":0
   },
   {
     "name":"Avengers: Infinity War",
@@ -15,7 +16,8 @@
     "price":"350$",
     "likes":0,
     "dislikes":0,
-    "delete":false
+    "delete":false,
+    "id":1
   },
   {
     "name":"Rampage",
@@ -24,7 +26,8 @@
     "price":"200$",
     "likes":0,
     "dislikes":0,
-    "delete":false
+    "delete":false,
+    "id":2
   },
   {
     "name":"Black Panther",
@@ -33,7 +36,8 @@
     "price":"280$",
     "likes":0,
     "dislikes":0,
-    "delete":false
+    "delete":false,
+    "id":3
   },
   {
     "name":"Bad Samaritan",
@@ -42,6 +46,7 @@
     "price":"150$",
     "likes":0,
     "dislikes":0,
-    "delete":false
+    "delete":false,
+    "id":4
   }
 ]
