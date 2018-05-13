@@ -5,9 +5,9 @@ $(document).ready(function($) {
         alert('page did not reload');
     });
 });
-function addObject(form){
 
-    var jsonList = (function() {
+
+var jsonList = (function() {
         var json = null;
         $.ajax({
             'async': false,
@@ -22,17 +22,9 @@ function addObject(form){
         return json;
     })();
 
+    console.log(jsonList);
 
-
-    function download(content, fileName, contentType) {
-        var a = document.createElement("a");
-        var file = new Blob([content], {type: contentType});
-        a.href = URL.createObjectURL(file);
-        a.download = fileName;
-        a.click();
-        console.log("success downlaod function");
-    }
-
+function addObject(form){
 
     var jsonElement = {
         "name":form.Name.value,
@@ -43,17 +35,18 @@ function addObject(form){
         "dislikes":0,
         "delete":false
     };
-     var text1 = JSON.stringify(jsonElement);
 
-    document.getElementById('output').innerHTML=text1;
 
+    jsonList.push(jsonElement);
+
+
+
+    console.log(jsonList);
+    var text1 = JSON.stringify(jsonElement);
     console.log(text1);
 
-    jsonList.append(jsonElement);
-    console.log("success");
-    var text = JSON.stringify(json);
-    download(text, 'json.json', 'text/plain');
+}
 
-    }
+
 
 
