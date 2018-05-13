@@ -1,0 +1,43 @@
+ul{
+    list-style-type: none ;
+}
+
+ul li{
+    display: inline-block;
+    width: 19%;
+    /*border: 1px solid gray;*/
+}
+
+ul li a{
+
+    /*margin-left: 40%;*/
+    text-align: center;
+    display: block;
+    height: 40px ;
+    border: 1px solid black;
+    line-height: 40px;
+}
+
+body{
+
+}
+
+
+.hidden{
+    display:none;
+    right:90px;
+    width:19%;  
+}
+
+.hidden{
+    position: absolute;
+
+}
+
+.hidden li{
+
+    height: auto;
+    width: 100%;
+    display: block;
+}
+

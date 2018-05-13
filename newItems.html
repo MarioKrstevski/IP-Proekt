@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title>Add New Item</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="styles/menu.css">
+
+</head>
+
+<body>
+<nav>
+    <ul>
+
+        <li> <a href="/IP%20Proekt/index.html">Home</a>  </li>
+        <li> <a href="/IP%20Proekt/catalog.html">Catalog</a> </li>
+        <li> <a href="/IP%20Proekt/newItems.html">Add New</a></li>
+        <li> <a href="/IP%20Proekt/gallery.html">Gallery</a></li>
+        <li id="login"> <a href="#">Login</a></li>
+
+        <ul class="hidden" style="padding-left: 15px;" >
+            <li> <input type="text" name="loginName" > </li>
+            <li> <input type="password"  name="loginPassword"> </li>
+            <li> <button>Submit</button> </li>
+        </ul>
+
+    </ul>
+</nav>
+
+<div id="content">
+    <form  onsubmit="addObject(this)">
+
+        Name <input type="text" name="Name">
+        Description <input type="text" name="Description">
+        Price <input type="number" name="Prize">
+        ImageUrl <input type="text" name="ImageUrl">
+        <button onclick="addObject(this.parent)" type="submit" >Kreiraj JSON</button>
+
+        <button onclick="addObject(this.parent)" type="button">Kreiraj</button>
+    </form>
+
+
+</div>
+<div id="output">
+
+
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/stuff.js"></script>
+<script src="js/newItems.js"></script>
+
+
+</body>
+</html>

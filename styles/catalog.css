@@ -1,0 +1,36 @@
+#catalog{
+    width:90%;
+    border:3px solid blue;
+
+    margin: 0 auto;
+}
+
+
+.object{
+    width:100%;
+    border:1px solid purple;
+    display: inline-block;
+    margin: 5px;
+
+}
+
+.img{
+    width:180px;
+    display: inline;
+    float:left;
+
+}
+
+
+.right{
+    display: block;
+    float:left;
+    width: 80%;
+    border:1px red dashed;
+
+
+}
+
+button{
+    margin-left: 5px;
+}

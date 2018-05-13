@@ -1,0 +1,47 @@
+[
+  {
+    "name":"Truth or Dare",
+    "image":"./images/truth.jpg",
+    "description":"A harmless game of Truth or Dare among friends turns deadly when someone -- or something -- begins to punish those who tell a lie or refuse the dare.",
+    "price":"300$",
+    "likes":0,
+    "dislikes":0,
+    "delete":false
+  },
+  {
+    "name":"Avengers: Infinity War",
+    "image":"./images/avengers.jpg",
+    "description":"The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+    "price":"350$",
+    "likes":0,
+    "dislikes":0,
+    "delete":false
+  },
+  {
+    "name":"Rampage",
+    "image":"./images/rampage.jpg",
+    "description":"When three different animals become infected with a dangerous pathogen, a primatologist and a geneticist team up to stop them from destroying Chicago.",
+    "price":"200$",
+    "likes":0,
+    "dislikes":0,
+    "delete":false
+  },
+  {
+    "name":"Black Panther",
+    "image":"./images/panther.jpg",
+    "description":"T'Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced African nation, but his claim is challenged by a vengeful outsider who was a childhood victim of T'Challa's father's mistake.",
+    "price":"280$",
+    "likes":0,
+    "dislikes":0,
+    "delete":false
+  },
+  {
+    "name":"Bad Samaritan",
+    "image":"./images/bad.jpg",
+    "description":"A pair of burglars stumble upon a woman being held captive in a home they intended to rob.",
+    "price":"150$",
+    "likes":0,
+    "dislikes":0,
+    "delete":false
+  }
+]
