@@ -7,43 +7,39 @@ $(document).ready(function($) {
 });
 
 
-var jsonList = (function() {
-        var json = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': "./json/database.json",
-            'dataType': "json",
-            'success': function (data) {
-                json = data;
-            }
-        });
-        console.log(json);
-        return json;
-    })();
-
-    console.log(jsonList);
 
 function addObject(form){
 
-    var jsonElement = {
+
+    var movieListItems = JSON.parse(localStorage.movies);
+
+    console.log(movieListItems);
+
+    var newMovie = {
         "name":form.Name.value,
         "image":form.ImageUrl.value,
         "description":form.Description.value,
         "price":form.Prize.value,
         "likes":0,
         "dislikes":0,
-        "delete":false
+        "delete":false,
+        "id": movieListItems.length
+
     };
 
 
-    jsonList.push(jsonElement);
+    console.log(newMovie);
+
+
+    movieListItems.push(newMovie);
+
+    console.log(movieListItems);
 
 
 
-    console.log(jsonList);
-    var text1 = JSON.stringify(jsonElement);
-    console.log(text1);
+    localStorage.setItem('movies', JSON.stringify(movieListItems));
+
+
 
 }
 

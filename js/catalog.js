@@ -3,9 +3,13 @@
     var movieList = JSON.parse(localStorage.movies);
 
 function  populateHTML() {
-    var movieObject = '';
+
+    $("#catalog").innerHTML = '';
+
 
     $.each(movieList,function (key, value) {
+
+        var movieObject = '';
 
         movieObject+='<div class="object">';
         movieObject+='<div style="display:none" > ' + value.id + ' </div>';
@@ -22,9 +26,10 @@ function  populateHTML() {
         movieObject+='</div>';
         movieObject+='</div>';
 
+        $("#catalog").append(movieObject);
 
     });
-    $("#catalog").append(movieObject);
+
 
 }
 
@@ -70,6 +75,52 @@ function  increaseDislikes(movie){
     movie.parentNode.childNodes[11].innerHTML = ++movieListItems[currentId].dislikes;
 
     localStorage.setItem('movies', JSON.stringify(movieListItems));
+}
+
+
+function deleteSelectedMovies() {
+
+        var movieListItems = JSON.parse(localStorage.movies);
+
+        console.log(movieListItems);
+
+        var todel = [];
+
+        for ( var i=0 ;i<  movieListItems.length ;i++){
+
+            if(movieListItems[i].delete === true ){
+                todel.push(i);
+            }
+        }
+        console.log("The Deleted ID's should be ", todel);
+
+        // for ( var j=todel.length ;j>0 ;j--){
+        //             movieListItems.splice(todel[j]-1,1);
+        //             todel.splice(j,1);
+        // }
+        // console.log(movieListItems);
+        // console.log(todel);
+        //
+
+        for ( var j=0 ;j<  movieListItems.length ;j++){
+
+            if(movieListItems[j].delete === true ){
+                movieListItems.splice(j,1);
+            }
+        }
+
+        for ( var z=0 ; z <  movieListItems.length ;z++) {
+            movieListItems[z].id = z;
+        }
+        console.log(movieListItems);
+
+        // If you uncomment this when you delete items ,it will really delete them from the Local Storage
+        // For now we are deleting in a variable to keep things safe and don't lose objects
+        localStorage.setItem('movies', JSON.stringify(movieListItems));
+        //
+
+
+        location.reload();
 }
 
 
