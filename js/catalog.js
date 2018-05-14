@@ -1,65 +1,76 @@
-$(document).ready(function () {
-    $.getJSON("./json/database.json",function(data){
-        var movieObject = '';
-
-        $.each(data,function (key, value) {
 
 
-            movieObject+='<div class="object">';
-            movieObject+='<div style="display:none" > ' + value.id + ' </div>';
-            movieObject+='<img class="img" src="'+ value.image+'" alt="Movie Image" >';
-            movieObject+='<div class="right" >';
-            movieObject+='<div style="display:none" > ' + value.id + ' </div>';
-            movieObject+='<h1 class="title">'+ value.name +'</h1>';
-            movieObject+='<p class="desc">'+ value.description +'</p>';
-            movieObject+='<p class="prize">'+ value.price +'</p> ';
-            movieObject+=' <button onclick="increaseLikes(this)" >Like</button> <span >'+ value.likes +'</span>';
-            movieObject+=' <button onclick="increaseDislikes(this)" >Dislike</button> <span> '+ value.dislikes + '</span>';
+    var movieList = JSON.parse(localStorage.movies);
 
-            movieObject+='</div>';
-            movieObject+='</div>';
+function  populateHTML() {
+    var movieObject = '';
+
+    $.each(movieList,function (key, value) {
+
+        movieObject+='<div class="object">';
+        movieObject+='<div style="display:none" > ' + value.id + ' </div>';
+        movieObject+='<img onclick="selectMovie(this)" class="img" src="'+ value.image+'" alt="Movie Image" >';
+        movieObject+='<div class="right" >';
+        movieObject+='<div style="display:none" > ' + value.id + ' </div>';
+        movieObject+='<h1 class="title">'+ value.name +'</h1>';
+        movieObject+='<p class="desc">'+ value.description +'</p>';
+        movieObject+='<p class="prize">'+ value.price +'</p> ';
+        movieObject+=' <button onclick="increaseLikes(this)" >Like</button> <span >'+ value.likes +'</span>';
+        movieObject+=' <button onclick="increaseDislikes(this)" >Dislike</button> <span> '+ value.dislikes + '</span>';
 
 
-        });
-        $("#catalog").append(movieObject);
+        movieObject+='</div>';
+        movieObject+='</div>';
 
-    })
 
-});
-
-var json = (function() {
-    var json = null;
-    $.ajax({
-        'async': false,
-        'global': false,
-        'url': "./json/database.json",
-        'dataType': "json",
-        'success': function (data) {
-            json = data;
-        }
     });
-    return json;
-})();
+    $("#catalog").append(movieObject);
 
-json[0].name = "Novo ime";
+}
 
-console.log(json[0].name);
+populateHTML();
 
-function increaseLikes(movie){
+function selectMovie(selectedMovie){
 
-    var currentId= parseInt(movie.parentNode.childNodes[0].innerHTML);
-    json[currentId].likes++;
-    movie.parentNode.childNodes[7].innerHTML = json[currentId].likes;
+    var movieListItems = JSON.parse(localStorage.movies);
+    var currentId= parseInt( selectedMovie.parentNode.childNodes[2].childNodes[0].innerHTML);
 
-    console.log(json[currentId].likes);
+    if (movieListItems[currentId].delete == false) {
+        movieListItems[currentId].delete = true;
+        selectedMovie.style.border = '1px solid red';
+    } else {
+        movieListItems[currentId].delete = false;
+        selectedMovie.style.border = 'none';
+    }
+    //console.log(movieListItems[currentId].delete);
+
+    localStorage.setItem('movies', JSON.stringify(movieListItems));
+
+}
+
+
+
+function increaseLikes(movie) {
+
+    var movieListItems = JSON.parse(localStorage.movies);
+
+    var currentId = parseInt(movie.parentNode.childNodes[0].innerHTML);
+    // console.log("Lajkovi se zgolemja", movieListItems[currentId].likes);
+    movie.parentNode.childNodes[7].innerHTML = ++movieListItems[currentId].likes;
+
+    localStorage.setItem('movies', JSON.stringify(movieListItems));
 }
 
 function  increaseDislikes(movie){
 
-    var currentId= parseInt(movie.parentNode.childNodes[0].innerHTML);
-    json[currentId].dislikes++;
-    movie.parentNode.childNodes[11].innerHTML = json[currentId].dislikes;
+    var movieListItems = JSON.parse(localStorage.movies);
 
-    console.log(json[currentId].dislikes);
+    var currentId = parseInt(movie.parentNode.childNodes[0].innerHTML);
+    // console.log("Lajkovi se zgolemja", movieListItems[currentId].dislikes);
+    movie.parentNode.childNodes[11].innerHTML = ++movieListItems[currentId].dislikes;
+
+    localStorage.setItem('movies', JSON.stringify(movieListItems));
 }
+
+
 
