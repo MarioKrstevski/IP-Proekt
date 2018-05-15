@@ -3,10 +3,6 @@ $(document).ready(function(){
         $(".hidden").css("display","block");
     });
 
-    document.cookie ="userName=152061; expires=Tue, 28 June 2018 12:00:00 UTC";
-
-        //"name=filip;username=152061;pw=finki;expires=Tue, 28 June 2018 12:00:00 UTC";
-
 });
 
 
