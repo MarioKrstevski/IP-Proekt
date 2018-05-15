@@ -2,7 +2,6 @@ $(document).ready(function($) {
     $(document).on('submit', '', function(event) {
         event.preventDefault();
 
-        alert('page did not reload');
     });
 });
 
@@ -30,13 +29,8 @@ function addObject(form){
 
     console.log(newMovie);
 
-
     movieListItems.push(newMovie);
-
     console.log(movieListItems);
-
-
-
     localStorage.setItem('movies', JSON.stringify(movieListItems));
 
 

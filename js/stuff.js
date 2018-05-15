@@ -19,6 +19,6 @@ function loadJSON( toLocalStorage, fromUrl){
     }
 }
 
-loadJSON( 'movies','./json/database.json');
+loadJSON( 'movies','C:\\Users\\Mario\\Desktop\\IP Proekt\\json\\database.json');
 
 

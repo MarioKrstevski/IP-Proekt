@@ -21,7 +21,7 @@ function displayMovie(param) {
             movieStuff+='<div class="txt" >';
 
             movieStuff+='<p class="first" >'+ movieList[param].description  +'</p>';
-            movieStuff+='<p class="second" >'+ movieList[param].price +'</p>';
+            movieStuff+='<p class="second" > Price:'+  movieList[param].price +'</p>';
 
             movieStuff+='<div class="third" >';
 
