@@ -1,0 +1,76 @@
+.singleMovie{
+    width:90%;
+    border:1px solid black;
+    height: 600px;
+}
+
+.la{
+
+    margin-top:250px;
+    float:left;
+
+
+    display: inline-block;
+    width:100px !important;
+    height: 100px;
+    border:1px solid red;
+}
+
+.la img{
+    width: 100px;
+    height: 100px;
+}
+
+.movieContent{
+
+        float: left;
+        width:70%;
+        border:1px solid purple;
+}
+
+.movieContent img{
+    margin-left: 150px;
+}
+
+.movieContent h1{
+    margin-left: 150px;
+}
+.ra{
+    margin-top:250px;
+    display: inline-block;
+    width:100px !important;
+    height: 100px;
+    border:1px solid red;
+
+}
+
+.ra img{
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+.first{
+    display: inline-block;
+    width:60%;
+
+    height: 80px;
+}
+
+.second{
+    display: inline-block;
+    width:20%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center  ;
+}
+
+.third{
+    width: 20%;
+    display: inline-block;
+    height: 80px;
+}
+
+.third div{
+    margin-bottom:9px;
+}

@@ -40,7 +40,7 @@ function selectMovie(selectedMovie){
     var movieListItems = JSON.parse(localStorage.movies);
     var currentId= parseInt( selectedMovie.parentNode.childNodes[2].childNodes[0].innerHTML);
 
-    if (movieListItems[currentId].delete == false) {
+    if (movieListItems[currentId].delete === false) {
         movieListItems[currentId].delete = true;
         selectedMovie.style.border = '1px solid red';
     } else {
