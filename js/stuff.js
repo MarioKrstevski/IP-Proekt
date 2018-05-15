@@ -3,9 +3,10 @@ $(document).ready(function(){
         $(".hidden").css("display","block");
     });
 
-    
 
 });
+
+
 
 function loadJSON( toLocalStorage, fromUrl){
     if (localStorage[toLocalStorage])
@@ -19,6 +20,5 @@ function loadJSON( toLocalStorage, fromUrl){
 }
 
 loadJSON( 'movies','./json/database.json');
-
 
 

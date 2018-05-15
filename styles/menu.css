@@ -1,10 +1,14 @@
+nav{
+    margin-bottom: 70px;
+}
+
 ul{
     list-style-type: none ;
 }
 
 ul li{
     display: inline-block;
-    width: 19%;
+    width: 16%;
     /*border: 1px solid gray;*/
 }
 
@@ -25,8 +29,8 @@ body{
 
 .hidden{
     display:none;
-    right:90px;
-    width:19%;  
+    right:35px;
+    width:19%;
 }
 
 .hidden{

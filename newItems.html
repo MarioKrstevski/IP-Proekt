@@ -14,16 +14,22 @@
 <nav>
     <ul>
 
-        <li> <a href="/IP%20Proekt/index.html">Home</a>  </li>
+        <li> <a href="/IP%20Proekt/index.html"> Home</a>  </li>
         <li> <a href="/IP%20Proekt/catalog.html">Catalog</a> </li>
         <li> <a href="/IP%20Proekt/newItems.html">Add New</a></li>
         <li> <a href="/IP%20Proekt/gallery.html">Gallery</a></li>
+        <li> <a href="/IP%20Proekt/bestSeller.html">Most Liked</a></li>
         <li id="login"> <a href="#">Login</a></li>
 
         <ul class="hidden" style="padding-left: 15px;" >
-            <li> <input type="text" name="loginName" > </li>
-            <li> <input type="password"  name="loginPassword"> </li>
-            <li> <button>Submit</button> </li>
+
+            <div>
+
+                <li> <input id="loginName" type="text" name="loginName" > </li>
+                <li> <input id="loginPassword" type="password"  name="loginPassword" > </li>
+                <li> <button onclick="login()" >Login</button> </li>
+            </div>
+
         </ul>
 
     </ul>

@@ -8,6 +8,7 @@
 
 
         <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="styles/index.css">
 
 
     </head>
@@ -20,15 +21,16 @@
             <li> <a href="/IP%20Proekt/catalog.html">Catalog</a> </li>
             <li> <a href="/IP%20Proekt/newItems.html">Add New</a></li>
             <li> <a href="/IP%20Proekt/gallery.html">Gallery</a></li>
+            <li> <a href="/IP%20Proekt/bestSeller.html">Most Liked</a></li>
             <li id="login"> <a href="#">Login</a></li>
 
             <ul class="hidden" style="padding-left: 15px;" >
 
                 <div>
 
-                    <li> <input type="text" name="loginName" > </li>
-                    <li> <input type="password"  name="loginPassword"> </li>
-                    <li> <button>Submit</button> </li>
+                    <li> <input id="loginName" type="text" name="loginName" > </li>
+                    <li> <input id="loginPassword" type="password"  name="loginPassword" > </li>
+                    <li> <button onclick="login()" >Login</button> </li>
                 </div>
 
             </ul>
@@ -36,8 +38,28 @@
         </ul>
     </nav>
 
+    <h2>Welcome to the movie database made by Filip Ilievski with index 15xxxx </h2>
+    <div id="userwelcome" ></div>
+
+    <div id="mail" >
+
+        <h2>Send e-mail to me:</h2>
+
+        <form action="mailto:filip.ilievski@gmail.com" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name="name"><br>
+            E-mail:<br>
+            <input type="text" name="mail"><br>
+            Comment:<br>
+            <textarea type="text" name="comment"  rows="6" cols="30"> </textarea> <br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
         <script src="js/jquery-3.3.1.js"></script>
         <script src="js/stuff.js"></script>
+        <script src="js/cookie.js"></script>
        
 
     </body>

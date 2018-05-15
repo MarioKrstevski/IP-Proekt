@@ -140,10 +140,14 @@ function SelectSM(sm) {
 
     if (movieListItems[movieToShow].delete === false) {
         movieListItems[movieToShow].delete = true;
-        sm.style.color = 'red';
+        sm.classList.remove("blackColor");
+        sm.classList.add("redColor");
+
     } else {
         movieListItems[movieToShow].delete = false;
-        sm.style.color = 'black';
+        sm.classList.remove("redColor");
+        sm.classList.add("blackColor");
+
     }
 
     localStorage.setItem('movies', JSON.stringify(movieListItems));
